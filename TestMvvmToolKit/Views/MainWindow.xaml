@@ -1,0 +1,30 @@
+﻿<Window x:Class="TestMvvmToolKit.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:TestMvvmToolKit"
+        xmlns:views="clr-namespace:TestMvvmToolKit.Views"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="720" Width="1280">
+
+    <Grid>
+        <DockPanel VerticalAlignment="Top" Background="LightGreen" Height="50">
+            <TextBlock Text="Test MVVM Tool Kit" FontSize="20" FontWeight="Bold" FontFamily="Cascadia Code" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        </DockPanel>
+        <DockPanel Background="LightGreen" HorizontalAlignment="Left" Width="240" >
+            <StackPanel>
+                <Button Command="{Binding ManagerCommand}" Cursor="Hand" Background="{x:Null}"  FontWeight="Bold" FontFamily="Cascadia Code" FontSize="18" Content="Manager" Margin="10 50 10 5" Padding="15 10"/>
+                <Button Command="{Binding AddCommand}" Cursor="Hand"  Background="{x:Null}" FontWeight="Bold" FontFamily="Cascadia Code"  FontSize="18" Content="Add"  Margin="10 5" Padding="15 10"/>
+                <Button Command="{Binding HelpCommand}" Cursor="Hand"  Background="{x:Null}" FontWeight="Bold"  FontFamily="Cascadia Code" FontSize="18" Content="Help"  Margin="10 5" Padding="15 10"/>
+            </StackPanel>
+        </DockPanel>
+        <StackPanel Margin="240 50 0 0" >
+            <Grid>
+                <ContentControl Content="{Binding ContentsAll}"/>
+            </Grid>
+
+        </StackPanel>
+
+    </Grid>
+</Window>
